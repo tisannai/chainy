@@ -58,13 +58,13 @@ typedef ch_t*              ch_p; /**< Cursor reference. */
 
 
 
-#ifdef CHAINY_MEM_API
+#ifdef CHAINY_USE_MEM_API
 
 /*
- * CHAINY_MEM_API allows to use custom memory allocation functions,
+ * CHAINY_USE_MEM_API allows to use custom memory allocation functions,
  * instead of the default: ch_malloc, ch_free, ch_realloc.
  *
- * If CHAINY_MEM_API is used, the user must provide implementation for the
+ * If CHAINY_USE_MEM_API is used, the user must provide implementation for the
  * below functions and they must be compatible with malloc etc.
  */
 

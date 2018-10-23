@@ -1,7 +1,5 @@
 # Chainy - Singly Linked List library
 
-## Introduction
-
 Chainy is a Singly Linked List type container library with emphasis
 on efficiency and convenient usage. It provides a compact API with
 basic operations. However, the API provides all that is needed.
@@ -33,27 +31,15 @@ type is `ch_s` and `ch_t` is a pointer to that type.
 
 Items are added to the list with `ch_add()`.
 
-
-## Basic usage
-
-TBD
-
-
-## Node segments
-
-TBD
-
-
-## Memory API
-
-TBD
+See Doxygen docs and `chainy.h` for details about Chainy API. Also
+consult the test directory for usage examples.
 
 
 ## Chainy API documentation
 
 See Doxygen documentation. Documentation can be created with:
 
-    shell> rake doxygen
+    shell> doxygen .doxygen
 
 
 ## Examples
@@ -66,11 +52,11 @@ directory for testcases.
 
 Ceedling based flow is in use:
 
-    shell> rake
+    shell> ceedling
 
 Testing:
 
-    shell> rake test:all
+    shell> ceedling test:all
 
 User defines can be placed into `project.yml`. Please refer to
 Ceedling documentation for details.
