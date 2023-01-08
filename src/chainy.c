@@ -22,7 +22,7 @@ static cn_t cn_new( ch_d data )
 {
     cn_t node;
 
-    node = ch_malloc( sizeof( cn_t ) );
+    node = ch_malloc( sizeof( cn_s ) );
     node->next = NULL;
     node->data = data;
 
@@ -132,6 +132,40 @@ ch_bool_t ch_remove( ch_t c, ch_d data )
     }
 
     return ret;
+}
+
+
+void ch_push( ch_t c, ch_d data )
+{
+    cn_t node;
+
+    node = cn_new( data );
+
+    if ( c->head == NULL ) {
+        /* First entry. */
+        c->head = node;
+    } else {
+        /* Push. */
+        node->next = c->head;
+        c->head = node;
+    }
+}
+
+
+ch_d ch_pop( ch_t c )
+{
+    cn_t node;
+    ch_d data;
+
+    if ( c->head ) {
+        node = c->head;
+        data = node->data;
+        c->head = node->next;
+        ch_free( node );
+        return data;
+    } else {
+        return NULL;
+    }
 }
 
 

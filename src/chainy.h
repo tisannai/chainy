@@ -183,6 +183,24 @@ ch_bool_t ch_remove( ch_t c, ch_d data );
 
 
 /**
+ * Push data node to front of Chainy (stack).
+ *
+ * @param c    Chainy.
+ * @param data Data to add.
+ */
+void ch_push( ch_t c, ch_d data );
+
+
+/**
+ * Pop data node from front of Chainy and return the popped data, or
+ * NULL if Chainy (stack) is empty.
+ *
+ * @param c    Chainy.
+ */
+ch_d ch_pop( ch_t c );
+
+
+/**
  * Return next node.
  *
  * @param c Chainy.
